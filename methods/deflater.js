@@ -659,10 +659,10 @@ function JSDeflater(/*inbuff*/inbuf) {
         if (zip_compr_level <= 3) {
             zip_prev_length = MIN_MATCH - 1;
             zip_match_length = 0;
+            zip_match_available = 0;
         }
         else {
             zip_match_length = MIN_MATCH - 1;
-            zip_match_available = 0;
             zip_match_available = 0;
         }
 
@@ -1540,7 +1540,7 @@ function JSDeflater(/*inbuff*/inbuf) {
 
     return {
         deflate: function () {
-            return deflate(inbuf, 8);
+            return deflate(inbuf, 3);
         }
     }
 }

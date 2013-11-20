@@ -128,7 +128,7 @@ module.exports = function(/*String|Buffer*/input, /*Number*/inputType) {
                     }
                 })
             }
-            entryList.slice(entryList.indexOf(entry), 1);
+            entryList.splice(entryList.indexOf(entry), 1);
             delete(entryTable[entryName]);
             mainHeader.totalEntries = entryList.length;
         },
